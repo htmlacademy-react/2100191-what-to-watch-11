@@ -45,7 +45,7 @@ function loginScreen(){
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
 export default loginScreen;

@@ -126,7 +126,7 @@ function myList(){
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
 export default myList;
