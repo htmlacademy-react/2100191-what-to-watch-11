@@ -115,7 +115,7 @@ function MainScreen({featuredMovie}: HomeScreenType): JSX.Element {
 
           <div className="catalog__films-list">
             {cardsLength.map((number) => (
-              <FilmCard key={number.toString()}/>
+              <FilmCard key={number}/>
             ))}
           </div>
 
