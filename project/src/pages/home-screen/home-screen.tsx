@@ -1,6 +1,7 @@
 import FilmCard from '../../components/film-card/film-card';
 
-const CARDS_ON_PAGE = 20;
+//const CARDS_ON_PAGE = 20;
+const cardsLength = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 
 type MovieType = {
   name: string;
@@ -11,16 +12,6 @@ type MovieType = {
 type HomeScreenType = {
   featuredMovie: MovieType;
 }
-
-const getFilmCards = (): JSX.Element[] => {
-  const arrayFilmCards = [];
-
-  for (let i = 0; i < CARDS_ON_PAGE; i++) {
-    arrayFilmCards.push(<FilmCard value={i}/>);
-  }
-
-  return arrayFilmCards;
-};
 
 function MainScreen({featuredMovie}: HomeScreenType): JSX.Element {
   return (
@@ -123,7 +114,9 @@ function MainScreen({featuredMovie}: HomeScreenType): JSX.Element {
           </ul>
 
           <div className="catalog__films-list">
-            {getFilmCards()}
+            {cardsLength.map((number) => (
+              <FilmCard key={number.toString()}/>
+            ))}
           </div>
 
           <div className="catalog__more">
